@@ -33,3 +33,15 @@ Home Assistant Lovelace UI Configuration
 ## Vacuums Tab
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/vacuum-tab.png">
+
+## Lights Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/lights-tab.png">
+
+## Meters Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/meters-tab.png">
+
+## Utilities Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/utilities-tab.png">
