@@ -1,6 +1,6 @@
 # my-ha-config
 
-Home Assistant Configuration
+Home Assistant Lovelace UI Configuration
 
 ## Mail Tab
 
