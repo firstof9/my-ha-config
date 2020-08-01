@@ -1,0 +1,288 @@
+- badges: []
+  cards:
+    - entities:
+        - animation:
+            state: "on"
+          direction: right
+          entities:
+            - entity: sensor.office_ups_battery_charge
+            - entity: sensor.office_ups_load
+              severity:
+                - color: var(--label-badge-green)
+                  from: 0
+                  to: 30
+                - color: orange
+                  from: 40
+                  to: 50
+                - color: var(--label-badge-red)
+                  from: 50
+                  to: 100
+          entity_row: true
+          height: 25px
+          positions:
+            icon: "off"
+            indicator: inside
+          severity:
+            - color: var(--label-badge-red)
+              from: 0
+              to: 40
+            - color: orange
+              from: 40
+              to: 65
+            - color: var(--label-badge-green)
+              from: 65
+              to: 100
+          style: |-
+            bar-card-name {
+              font-weight: bold; 
+              text-shadow: 2px 2px 2px black;
+            }
+            bar-card-value {
+              font-weight: bold;   
+              text-shadow: 2px 2px 2px black;
+            }
+          type: "custom:bar-card"
+        - sensor.office_ups_status
+        - sensor.office_ups_battery_runtime
+        - sensor.office_ups_self_test_result
+      show_header_toggle: false
+      title: Office UPS
+      type: entities
+    - entities:
+        - animation:
+            state: "on"
+          direction: right
+          entities:
+            - entity: sensor.ups_battery
+            - entity: sensor.ups_load
+              severity:
+                - color: var(--label-badge-green)
+                  from: 0
+                  to: 30
+                - color: orange
+                  from: 40
+                  to: 50
+                - color: var(--label-badge-red)
+                  from: 50
+                  to: 100
+          entity_row: true
+          height: 25px
+          positions:
+            icon: "off"
+            indicator: inside
+          severity:
+            - color: var(--label-badge-red)
+              from: 0
+              to: 40
+            - color: orange
+              from: 40
+              to: 65
+            - color: var(--label-badge-green)
+              from: 65
+              to: 100
+          style: |-
+            bar-card-name {
+              font-weight: bold; 
+              text-shadow: 2px 2px 2px black;
+            }
+            bar-card-value {
+              font-weight: bold;   
+              text-shadow: 2px 2px 2px black;
+            }
+          type: "custom:bar-card"
+        - entity: sensor.ups_status
+        - sensor.ups_time_left
+        - sensor.ups_last_self_test
+      show_header_toggle: false
+      title: Network UPS
+      type: entities
+    - entities:
+        - animation:
+            state: "on"
+          direction: right
+          entities:
+            - entity: sensor.esxi_ups_battery_charge
+            - entity: sensor.esxi_ups_load
+              severity:
+                - color: var(--label-badge-green)
+                  from: 0
+                  to: 30
+                - color: orange
+                  from: 40
+                  to: 50
+                - color: var(--label-badge-red)
+                  from: 50
+                  to: 100
+          entity_row: true
+          height: 25px
+          positions:
+            icon: "off"
+            indicator: inside
+          severity:
+            - color: var(--label-badge-red)
+              from: 0
+              to: 40
+            - color: orange
+              from: 40
+              to: 65
+            - color: var(--label-badge-green)
+              from: 65
+              to: 100
+          style: |-
+            bar-card-name {
+              font-weight: bold; 
+              text-shadow: 2px 2px 2px black;
+            }
+            bar-card-value {
+              font-weight: bold;   
+              text-shadow: 2px 2px 2px black;
+            }
+          type: "custom:bar-card"
+        - sensor.esxi_ups_status
+        - sensor.esxi_ups_battery_runtime
+        - sensor.esxi_ups_self_test_result
+      show_header_toggle: false
+      title: ESXi 2 UPS
+      type: entities
+    - entities:
+        - animation:
+            state: "on"
+          direction: right
+          entities:
+            - entity: sensor.nas_ups_battery_charge
+            - entity: sensor.nas_ups_load
+              severity:
+                - color: var(--label-badge-green)
+                  from: 0
+                  to: 30
+                - color: orange
+                  from: 40
+                  to: 50
+                - color: var(--label-badge-red)
+                  from: 50
+                  to: 100
+          entity_row: true
+          height: 25px
+          positions:
+            icon: "off"
+            indicator: inside
+          severity:
+            - color: var(--label-badge-red)
+              from: 0
+              to: 40
+            - color: orange
+              from: 40
+              to: 65
+            - color: var(--label-badge-green)
+              from: 65
+              to: 100
+          style: |-
+            bar-card-name {
+              font-weight: bold; 
+              text-shadow: 2px 2px 2px black;
+            }
+            bar-card-value {
+              font-weight: bold;   
+              text-shadow: 2px 2px 2px black;
+            }
+          type: "custom:bar-card"
+        - sensor.nas_ups_status
+        - sensor.nas_ups_battery_runtime
+        - sensor.nas_ups_self_test_result
+      show_header_toggle: false
+      title: NAS UPS
+      type: entities
+    - entities:
+        - animation:
+            state: "on"
+          direction: right
+          entities:
+            - entity: sensor.old_esxi_ups_battery_charge
+            - entity: sensor.old_esxi_ups_load
+              severity:
+                - color: var(--label-badge-green)
+                  from: 0
+                  to: 30
+                - color: orange
+                  from: 40
+                  to: 50
+                - color: var(--label-badge-red)
+                  from: 50
+                  to: 100
+          entity_row: true
+          height: 25px
+          positions:
+            icon: "off"
+            indicator: inside
+          severity:
+            - color: var(--label-badge-red)
+              from: 0
+              to: 40
+            - color: orange
+              from: 40
+              to: 65
+            - color: var(--label-badge-green)
+              from: 65
+              to: 100
+          style: |-
+            bar-card-name {
+              font-weight: bold; 
+              text-shadow: 2px 2px 2px black;
+            }
+            bar-card-value {
+              font-weight: bold;   
+              text-shadow: 2px 2px 2px black;
+            }
+          type: "custom:bar-card"
+        - sensor.old_esxi_ups_status
+        - sensor.old_esxi_ups_battery_runtime
+        - sensor.old_esxi_ups_self_test_result
+      show_header_toggle: false
+      title: ESXi 1 UPS
+      type: entities
+    - animation:
+        speed: "1.5"
+        state: "on"
+      direction: right
+      entities:
+        - entity: sensor.bedroom_3_humidity_battery
+          name: Girls Room Sensor
+        - entity: sensor.multisensorfeather_loft_5_0_battery
+          name: Loft Sensor
+        - entity: sensor.master_bedroom_humidity_battery
+          name: Master Sensor
+        - entity: sensor.front_door_lock_battery
+          name: Front Door Lock
+        - entity: sensor.robot_vacuum_battery
+        - entity: sensor.braava_jet_battery_level
+        - entity: sensor.chrisphone_battery_level
+        - entity: sensor.dalesphone_battery_level
+        - entity: sensor.momsphone_battery_level
+        - entity: sensor.dadsphone_battery_level
+      height: 15px
+      positions:
+        icon: "off"
+        indicator: inside
+      severity:
+        - color: var(--label-badge-red)
+          from: 0
+          to: 40
+        - color: orange
+          from: 40
+          to: 65
+        - color: var(--label-badge-green)
+          from: 65
+          to: 100
+      style: |-
+        bar-card-name {
+          font-weight: bold; 
+          text-shadow: 2px 2px 2px black;
+        }
+        bar-card-value {
+          font-weight: bold;   
+          text-shadow: 2px 2px 2px black;
+        }
+      type: "custom:bar-card"
+  icon: "mdi:battery"
+  id: battery
+  title: UPS
