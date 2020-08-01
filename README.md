@@ -26,9 +26,9 @@ Home Assistant Lovelace UI Configuration
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/system-info-tab.png">
 
-## Infrastructure Tab
+## Infrasturcture Tab
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/ifrastructure-tab.png">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/infrasturcture-tab.png">
 
 ## Vacuums Tab
 
