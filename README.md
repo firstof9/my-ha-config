@@ -8,7 +8,7 @@ Home Assistant Lovelace UI Configuration
 
 ## Floor Plan Tab
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/floor-plan.png">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/floor-plan.gif">
 
 ## Security Tab
 
