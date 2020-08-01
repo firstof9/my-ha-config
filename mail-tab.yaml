@@ -1,0 +1,41 @@
+- badges: []
+  cards:
+    - cards:
+        - cards:
+            - entities:
+                - entity: sensor.mail_usps_mail
+                  name: USPS Mail
+                  secondary_info: last-changed
+                - entity: sensor.mail_packages_in_transit
+                  name: Packages in Transit
+                - entity: sensor.mail_packages_delivered
+                  name: Packages Delivered
+              show_header_toggle: false
+              type: entities
+          type: horizontal-stack
+        - columns: 3
+          entities:
+            - entity: sensor.mail_ups_delivering
+              image: /local/icons/ups.png
+            - entity: sensor.mail_fedex_delivering
+              image: /local/icons/fedex.jpeg
+            - entity: sensor.mail_usps_delivering
+              image: /local/icons/usps.png
+            - entity: sensor.mail_amazon_packages
+              image: /local/icons/amazon-wh.png
+            - entity: sensor.mail_dhl_delivering
+              image: /local/icons/dhl.png
+          show_name: false
+          title: Out for Delivery
+          type: glance
+      type: vertical-stack
+    - aspect_ratio: 50%
+      camera_image: camera.mail_usps
+      camera_view: live
+      entity: camera.mail_usps
+      show_name: false
+      show_state: false
+      type: picture-entity
+  icon: "mdi:mailbox"
+  theme: Backend-selected
+  title: Deliveries
