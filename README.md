@@ -72,7 +72,7 @@ Home Assistant Lovelace UI Configuration
 
 ## Weather Tab
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/weather-tab.png">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/weather-tab.gif">
 
 ## Climate Tab
 
