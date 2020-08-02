@@ -18,6 +18,8 @@ Theme: `darkblue` (see theme directory)
 
 ## Mail View
 
+Sensors from [Mail and Packages](https://github.com/moralmunky/Home-Assistant-Mail-And-Packages/)
+
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/mail-tab.png">
 
 ## Battery/UPS View
