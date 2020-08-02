@@ -1,0 +1,99 @@
+darkblue:
+  # Main colors that can be changed
+  dark-primary-color: "#788edc"
+  disabled-text-color: "#545454"
+  divider-color: "rgba(255, 255, 255, 0.12)"
+  light-primary-color: "#3e78ad"
+  paper-card-background-color: "#2a2a2be5" # "#1d1d1de5" previous value
+  paper-grey-200: "#191919"
+  paper-item-icon-color: "#d3d3d3"
+  paper-listbox-background-color: "#2a2a2be5" # "#202020" previous value
+  primary-background-color: "#303030"
+  primary-color: "#3974a7"
+  primary-text-color: "#cfcfcf"
+  secondary-background-color: "#131313"
+  sidebar-text_-_background: "#262f35"
+  sidebar-icon-color: "var(--primary-text-color)"
+  # Colors based on variables, see above
+  paper-card-header-color: "var(--paper-item-icon-color)"
+  paper-item-icon-active-color: "var(--primary-color)"
+  paper-item-icon_-_color: "var(--primary-text-color)"
+  paper-listbox-color: "var(--primary-text-color)"
+  paper-grey-50: "var(--primary-text-color)"
+  paper-slider-active-color: "var(--primary-color)"
+  paper-slider-knob-color: "var(--primary-color)"
+  paper-slider-knob-start-color: "var(--primary-color)"
+  paper-slider-pin-color: "var(--primary-color)"
+  paper-slider-secondary-color: "var(--light-primary-color)"
+  paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
+  paper-toggle-button-checked-button-color: "var(--primary-color)"
+  paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
+  paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
+  secondary-text-color: "var(--primary-color)"
+  label-badge-red: "#9e0909"
+  label-badge-background-color: "var(--secondary-background-color)"
+  label-badge-text-color: "var(--text-primary-color)"
+  table-row-background-color: "var(--paper-card-background-color)"
+  table-row-alternative-background-color: "var(--sidebar-text_-_background)"
+  # Stylin'
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: "0 5px 5px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)"
+  # ha-card-background: "filter: blur(4px)"
+  card-background-color: "var(--paper-card-background-color)"
+
+  # Z-Wave Graph specific colors to be added to theme
+
+  greenish: "#00cc00" # level 0 color
+  cyanish: "#00b36b" # level 1 color
+  light-magenta: "#999900" # level 2 color
+  dark-magenta: "#b36b00" # level 3 color
+  dimmed-text: "#696969" # level 4 color
+  light-background: "#595959" # level background color
+
+  zwave-background-color: var(--primary-background-color) # main window bacground color
+  zwave-group-background-color: var(--secondary-background-color) # grouped devices background color
+  zwave-group-border-color: var(--light-background) # border of group rectangle
+  zwave-group-label-color: var(--primary-text-color) # color of group label
+  zwave-zoom-highlight-color: var(--primary-color) # zoom area bacground color - not identified yet
+  zwave-zoom-border-color: var(--light-background) # zoom area border color - not identified yet
+  #zwave-legend-header-color: var(--primary-text-color)             # text of legend header - not know yet how to implement
+  zwave-legend-item-color: var(--secondary-text-color) # legend item text color (not for node colors)
+  zwave-node-hub-background-color: var(--light-background) # zwave hub background color
+  zwave-node-hub-outline-color: var(--greenish) # zwave hub background color
+  zwave-node-hub-text-color: var(--greenish) # zwave hub text color
+  zwave-1-hop-background-color: var(--light-background) # 1st level node background color
+  zwave-1-hop-outline-color: var(--cyanish) # 1st level node outline color
+  zwave-1-hop-text-color: var(--cyanish) # 1st level node text color
+  zwave-2-hop-background-color: var(--light-background) # ..........
+  zwave-2-hop-outline-color: var(--light-magenta)
+  zwave-2-hop-text-color: var(--light-magenta)
+  zwave-3-hop-background-color: var(--light-background)
+  zwave-3-hop-outline-color: var(--dark-magenta)
+  zwave-3-hop-text-color: var(--dark-magenta)
+  zwave-4-hop-background-color: var(--light-background)
+  zwave-4-hop-outline-color: var(--dimmed-text)
+  zwave-4-hop-text-color: var(--dimmed-text)
+  zwave-failed-background-color: var(--light-background)
+  zwave-failed-outline-color: "#ff0000" #var(--)
+  zwave-failed-text-color: "#ff0000" #var(--)
+  zwave-unconnected-background-color: var(--primary-background-color)
+  zwave-unconnected-outline-color: var(--dimmed-text)
+  zwave-unconnected-text-color: var(--dimmed-text)
+
+  # HACS Colors
+  markdown-code-background-color: var(--secondary-background-color)
+
+  # Card Mod
+  card-mod-theme: darkblue
+
+  ok-color: rgb(0, 80, 0)
+  error-color: rgb(80, 0, 0)
+  info-color: rgb(50, 50, 150)
+  warning-color: rgb(100, 100, 0)
+
+  bg-filter: blur(4px)
+
+  card-mod-card: |
+    ha-card {
+      backdrop-filter: var(--bg-filter);
+    }

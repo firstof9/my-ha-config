@@ -2,6 +2,8 @@
 
 Home Assistant Lovelace UI Configuration
 
+Theme: `darkblue` (see theme directory)
+
 ## Home Tab
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/home-screen.png">
