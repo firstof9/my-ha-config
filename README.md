@@ -103,6 +103,7 @@ Sensors/Cards:<br/>
 [NWS Alerts](https://github.com/finity69x2/nws_alerts)<br/>
 [Modified weather-card](https://github.com/firstof9/weather-card)<br/>
 [Modified NWS](https://github.com/firstof9/ha-nws)<br/>
+[homeassistant-blitzortung](https://github.com/mrk-its/homeassistant-blitzortung)<br/>
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/weather-tab.gif">
 
