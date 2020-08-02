@@ -85,3 +85,7 @@ Home Assistant Lovelace UI Configuration
 ## Automations Tab
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/automations-tab.png">
+
+## Printers Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/printers-tab.png">
