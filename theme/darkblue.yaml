@@ -87,7 +87,7 @@ darkblue:
   card-mod-theme: darkblue
 
   ok-color: rgb(0, 80, 0)
-  error-color: rgb(80, 0, 0)
+  error-color: rgb(255, 0, 0)
   info-color: rgb(50, 50, 150)
   warning-color: rgb(100, 100, 0)
 
