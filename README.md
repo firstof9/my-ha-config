@@ -21,6 +21,8 @@ Sensors:<br/>
 
 ## Floor Plan View
 
+[lovelace-floorplan](https://github.com/pkozul/lovelace-floorplan)
+
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/floor-plan.gif">
 
 ## Security View
