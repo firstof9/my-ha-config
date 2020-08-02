@@ -26,7 +26,7 @@ Home Assistant Lovelace UI Configuration
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/system-info-tab.png">
 
-## Infrasturcture Tab
+## Infrastucture Tab
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/infrasturcture-tab.png">
 
