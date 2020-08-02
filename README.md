@@ -3,6 +3,7 @@
 Home Assistant Lovelace UI Configuration
 
 Theme: `darkblue` (see theme directory)<br/>
+<br/>
 Resources:<br/>
 [mini-graph-card](https://github.com/kalkih/mini-graph-card)<br/>
 [bar-card](https://github.com/custom-cards/bar-card)<br/>
