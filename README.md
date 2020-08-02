@@ -45,3 +45,43 @@ Home Assistant Lovelace UI Configuration
 ## Utilities Tab
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/utilities-tab.png">
+
+## AI Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/AI-tab.png">
+
+## Docker Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/docker-tab.png">
+
+## Rooms Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/rooms-tab.png">
+
+## Servers Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/servers-tab.png">
+
+## Sensors Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/sensors-tab.png">
+
+## User Code Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/usercode-tab.png">
+
+## Weather Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/weather-tab.png">
+
+## Climate Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/climate-tab.png">
+
+## Cameras Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/cameras-tab.png">
+
+## Automations Tab
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/automations-tab.png">
