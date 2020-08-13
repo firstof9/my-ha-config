@@ -36,7 +36,7 @@ darkblue:
   table-row-background-color: "var(--paper-card-background-color)"
   table-row-alternative-background-color: "var(--sidebar-text_-_background)"
   # Stylin'
-  ha-card-border-radius: "10px"
+  ha-card-border-radius: "12px"
   ha-card-box-shadow: "0 5px 5px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)"
   # ha-card-background: "filter: blur(4px)"
   card-background-color: "var(--paper-card-background-color)"
