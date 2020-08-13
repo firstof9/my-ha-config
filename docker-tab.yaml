@@ -1,0 +1,409 @@
+- badges: []
+  cards:
+    - cards:
+        - template: title
+          type: "custom:decluttering-card"
+          variables:
+            - title: DockerHost
+        - cards:
+            - template: entities-no-header
+              type: "custom:decluttering-card"
+              variables:
+                - entities:
+                    - entities:
+                        - entity: sensor.dockerhost_containers_running
+                          name: Run
+                        - entity: sensor.dockerhost_containers_paused
+                          name: Pause
+                        - entity: sensor.dockerhost_containers_stopped
+                          name: Stop
+                      entity: sensor.dockerhost_containers_total
+                      name: Docker Containers
+                      state_header: Total
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - entity: sensor.dockerhost_containers_total
+                          name: Containers
+                      entity: sensor.dockerhost_images
+                      icon: "mdi:docker"
+                      name: Docker Images
+                      state_header: Images
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - entity: sensor.dockerhost_cpu
+                          name: CPU
+                          units: "%"
+                        - entity: sensor.dockerhost_memory
+                          name: RAM
+                          units: MB
+                      entity: sensor.dockerhost_containers_running
+                      icon: "mdi:docker"
+                      name: Docker Performance
+                      secondary_info:
+                        entity: sensor.dockerhost_version
+                        name: Docker Version
+                      show_state: false
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - animation:
+                            state: "on"
+                          decimal: "2"
+                          entity: sensor.dockerhost_cpu
+                          height: 15px
+                          icon: "mdi:cpu-64-bit"
+                          max: "100"
+                          min: "0"
+                          name: CPU Usage
+                          severity:
+                            - color: var(--label-badge-green)
+                              from: "0"
+                              to: "40"
+                            - color: orange
+                              from: "40"
+                              to: "65"
+                            - color: var(--label-badge-red)
+                              from: "65"
+                              to: "500"
+                          unit_of_measurement: "%"
+                      entity_row: true
+                      style: >-
+                        bar-card-name {
+                          font-weight: bold; 
+                          text-shadow: 2px 2px 2px black;
+                        }
+
+                        bar-card-value {
+                          font-weight: bold;   
+                          text-shadow: 2px 2px 2px black;
+                        } bar-card-animationbar, bar-card-contentbar,
+                        bar-card-backgroundbar, bar-card-currentbar {
+                          margin-top: 10px;
+                        }
+                      type: "custom:bar-card"
+                    - entities:
+                        - animation:
+                            state: "on"
+                          decimal: "2"
+                          entity: sensor.dockerhost_memory_percent
+                          height: 15px
+                          icon: "mdi:memory"
+                          max: "100"
+                          min: "0"
+                          name: Memory Used
+                          severity:
+                            - color: var(--label-badge-green)
+                              from: "0"
+                              to: "40"
+                            - color: orange
+                              from: "40"
+                              to: "75"
+                            - color: var(--label-badge-red)
+                              from: "75"
+                              to: "500"
+                          unit_of_measurement: "%"
+                      entity_row: true
+                      style: >-
+                        bar-card-name {
+                          font-weight: bold; 
+                          text-shadow: 2px 2px 2px black;
+                        }
+
+                        bar-card-value {
+                          font-weight: bold;   
+                          text-shadow: 2px 2px 2px black;
+                        } bar-card-animationbar, bar-card-contentbar,
+                        bar-card-backgroundbar, bar-card-currentbar {
+                          margin-top: 10px;
+                        }
+                      type: "custom:bar-card"
+          type: "custom:vertical-stack-in-card"
+        - template: title
+          type: "custom:decluttering-card"
+          variables:
+            - title: DockerHost2
+        - cards:
+            - template: entities-no-header
+              type: "custom:decluttering-card"
+              variables:
+                - entities:
+                    - entities:
+                        - entity: sensor.dockerhost2_containers_running
+                          name: Run
+                        - entity: sensor.dockerhost2_containers_paused
+                          name: Pause
+                        - entity: sensor.dockerhost2_containers_stopped
+                          name: Stop
+                      entity: sensor.dockerhost2_containers_total
+                      name: Docker Containers
+                      state_header: Total
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - entity: sensor.dockerhost2_containers_total
+                          name: Containers
+                      entity: sensor.dockerhost2_images
+                      icon: "mdi:docker"
+                      name: Docker Images
+                      state_header: Images
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - entity: sensor.dockerhost2_cpu
+                          name: CPU
+                          units: "%"
+                        - entity: sensor.dockerhost2_memory
+                          name: RAM
+                          units: MB
+                      entity: sensor.dockerhost2_containers_running
+                      icon: "mdi:docker"
+                      name: Docker Performance
+                      secondary_info:
+                        entity: sensor.dockerhost2_version
+                        name: Docker Version
+                      show_state: false
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - animation:
+                            state: "on"
+                          decimal: "2"
+                          entity: sensor.dockerhost2_cpu
+                          height: 15px
+                          icon: "mdi:cpu-64-bit"
+                          max: "100"
+                          min: "0"
+                          name: CPU Usage
+                          severity:
+                            - color: var(--label-badge-green)
+                              from: "0"
+                              to: "40"
+                            - color: orange
+                              from: "40"
+                              to: "65"
+                            - color: var(--label-badge-red)
+                              from: "65"
+                              to: "500"
+                          unit_of_measurement: "%"
+                      entity_row: true
+                      style: >-
+                        bar-card-name {
+                          font-weight: bold; 
+                          text-shadow: 2px 2px 2px black;
+                        } bar-card-animationbar, bar-card-contentbar,
+                        bar-card-backgroundbar, bar-card-currentbar {
+                          margin-top: 10px;
+                        }
+
+                        bar-card-value {
+                          font-weight: bold;   
+                          text-shadow: 2px 2px 2px black;
+                        }
+                      type: "custom:bar-card"
+                    - entities:
+                        - animation:
+                            state: "on"
+                          decimal: "2"
+                          entity: sensor.dockerhost2_memory_percent
+                          height: 15px
+                          icon: "mdi:memory"
+                          max: "100"
+                          min: "0"
+                          name: Memory Used
+                          severity:
+                            - color: var(--label-badge-green)
+                              from: "0"
+                              to: "40"
+                            - color: orange
+                              from: "40"
+                              to: "75"
+                            - color: var(--label-badge-red)
+                              from: "75"
+                              to: "500"
+                          unit_of_measurement: "%"
+                      entity_row: true
+                      style: >-
+                        bar-card-name {
+                          font-weight: bold; 
+                          text-shadow: 2px 2px 2px black;
+                        } bar-card-animationbar, bar-card-contentbar,
+                        bar-card-backgroundbar, bar-card-currentbar {
+                          margin-top: 10px;
+                        }               bar-card-value {
+                          font-weight: bold;   
+                          text-shadow: 2px 2px 2px black;
+                        }
+                      type: "custom:bar-card"
+          type: "custom:vertical-stack-in-card"
+        - template: title
+          type: "custom:decluttering-card"
+          variables:
+            - title: DockerHost3
+        - cards:
+            - template: entities-no-header
+              type: "custom:decluttering-card"
+              variables:
+                - entities:
+                    - entities:
+                        - entity: sensor.dockerhost3_containers_running
+                          name: Run
+                        - entity: sensor.dockerhost3_containers_paused
+                          name: Pause
+                        - entity: sensor.dockerhost3_containers_stopped
+                          name: Stop
+                      entity: sensor.dockerhost3_containers_total
+                      name: Docker Containers
+                      state_header: Total
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - entity: sensor.dockerhost3_containers_total
+                          name: Containers
+                      entity: sensor.dockerhost3_images
+                      icon: "mdi:docker"
+                      name: Docker Images
+                      state_header: Images
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - entity: sensor.dockerhost3_cpu
+                          name: CPU
+                          units: "%"
+                        - entity: sensor.dockerhost3_memory
+                          name: RAM
+                          units: MB
+                      entity: sensor.dockerhost3_containers_running
+                      icon: "mdi:docker"
+                      name: Docker Performance
+                      secondary_info:
+                        entity: sensor.dockerhost3_version
+                        name: Docker Version
+                      show_state: false
+                      type: "custom:multiple-entity-row"
+                    - entities:
+                        - animation:
+                            state: "on"
+                          decimal: "2"
+                          entity: sensor.dockerhost3_cpu
+                          height: 15px
+                          icon: "mdi:cpu-64-bit"
+                          max: "100"
+                          min: "0"
+                          name: CPU Usage
+                          severity:
+                            - color: var(--label-badge-green)
+                              from: "0"
+                              to: "40"
+                            - color: orange
+                              from: "40"
+                              to: "65"
+                            - color: var(--label-badge-red)
+                              from: "65"
+                              to: "500"
+                          unit_of_measurement: "%"
+                      entity_row: true
+                      style: |-
+                        bar-card-name {
+                          font-weight: bold; 
+                          text-shadow: 2px 2px 2px black;
+                        }
+                        bar-card-animationbar, bar-card-contentbar,
+                        bar-card-backgroundbar, bar-card-currentbar {
+                          margin-top: 10px;
+                        }            
+                        bar-card-value {
+                          font-weight: bold;   
+                          text-shadow: 2px 2px 2px black;
+                        }
+                      type: "custom:bar-card"
+                    - entities:
+                        - animation:
+                            state: "on"
+                          decimal: "2"
+                          entity: sensor.dockerhost3_memory_percent
+                          height: 15px
+                          icon: "mdi:memory"
+                          max: "100"
+                          min: "0"
+                          name: Memory Used
+                          severity:
+                            - color: var(--label-badge-green)
+                              from: "0"
+                              to: "40"
+                            - color: orange
+                              from: "40"
+                              to: "75"
+                            - color: var(--label-badge-red)
+                              from: "75"
+                              to: "500"
+                          unit_of_measurement: "%"
+                      entity_row: true
+                      style: >-
+                        bar-card-name {
+                          font-weight: bold; 
+                          text-shadow: 2px 2px 2px black;
+                        }
+
+                        bar-card-animationbar, bar-card-contentbar,
+                        bar-card-backgroundbar, bar-card-currentbar {
+                          margin-top: 10px;
+                        }            
+
+                        bar-card-value {
+                          font-weight: bold;   
+                          text-shadow: 2px 2px 2px black;
+                        }
+                      type: "custom:bar-card"
+          type: "custom:vertical-stack-in-card"
+      type: vertical-stack
+    - cards:
+        - entitypart: dockerhost_emoncmsdocker_db_1
+          logo: /local/systemicons/emon.png
+          name: EMonCMS DB
+          type: "custom:docker-card"
+        - entitypart: dockerhost_emoncmsdocker_web_1
+          logo: /local/systemicons/emon.png
+          name: EMonCMS Web
+          type: "custom:docker-card"
+        - entitypart: dockerhost_emoncmsdocker_redis_1
+          logo: /local/systemicons/emon.png
+          name: EMonCMS Redis
+          type: "custom:docker-card"
+      type: vertical-stack
+    - cards:
+        - entitypart: dockerhost2_mariadb
+          logo: /local/systemicons/mariadb.png
+          name: MariaDB
+          type: "custom:docker-card"
+        - entitypart: dockerhost3_influxdb
+          logo: /local/systemicons/influxdb.png
+          name: InfluxDB
+          type: "custom:docker-card"
+        - entitypart: dockerhost3_mqtt
+          logo: /local/systemicons/mqtt.png
+          name: MQTT
+          type: "custom:docker-card"
+        - entitypart: dockerhost2_zoneminder3
+          logo: /local/systemicons/zoneminder.png
+          name: ZoneMinder
+          type: "custom:docker-card"
+        - entitypart: dockerhost_keepalived
+          logo: /local/systemicons/keepalived.png
+          name: KeepAlived
+          type: "custom:docker-card"
+      type: vertical-stack
+    - cards:
+        - entitypart: dockerhost3_minecraftserver_minecraft_server_1
+          logo: /local/systemicons/minecraft.png
+          name: MineCraft
+          type: "custom:docker-card"
+        - entitypart: dockerhost2_transmission
+          logo: /local/systemicons/transmission.png
+          name: Transmission
+          type: "custom:docker-card"
+        - entitypart: dockerhost2_sonarr
+          logo: /local/systemicons/sonarr.png
+          name: Sonarr
+          type: "custom:docker-card"
+        - entitypart: dockerhost2_radarr
+          logo: /local/systemicons/radarr.png
+          name: Radarr
+          type: "custom:docker-card"
+      type: vertical-stack
+  icon: "mdi:docker"
+  path: docker
+  title: Docker

@@ -1,0 +1,212 @@
+- badges: []
+  cards:
+    - cards:
+        - cards:
+            - content: "## NAS"
+              type: markdown
+          type: horizontal-stack
+        - cards:
+            - entity: sensor.omv_cpu_load
+              max: 100
+              min: 0
+              name: NAS CPU Load
+              severity:
+                green: 0
+                red: 60
+                yellow: 40
+              type: gauge
+            - entity: sensor.omv_memory
+              max: 100
+              min: 0
+              name: NAS RAM Usage
+              severity:
+                green: 0
+                red: 75
+                yellow: 50
+              type: gauge
+          type: horizontal-stack
+        - entities:
+            - animation:
+                state: "on"
+              entity: sensor.omv_nas
+              height: 25px
+              name: OMV NAS Storage
+              positions:
+                indicator: inside
+            - animation:
+                state: "on"
+              entity: sensor.omv
+              name: OMV /boot .
+              positions:
+                indicator: inside
+            - entity: sensor.omv_2
+              name: OMV / .
+              positions:
+                indicator: inside
+          height: 25px
+          positions:
+            icon: "off"
+            indicator: outside
+            name: inside
+          severity:
+            - color: green
+              from: "0"
+              to: "40"
+            - color: gold
+              from: "40"
+              to: "60"
+            - color: orange
+              from: "60"
+              to: "75"
+            - color: red-orange
+              from: "75"
+              to: "85"
+            - color: darkred
+              from: "85"
+              to: "100"
+          style: |-
+            bar-card-name {
+              font-weight: bold; 
+              text-shadow: 2px 2px 2px black;
+            }
+            bar-card-value {
+              font-weight: bold;   
+              text-shadow: 2px 2px 2px black;
+            }   
+            ha-card {
+              backdrop-filter: blur(4px);
+            }
+          type: "custom:bar-card"
+        - entities:
+            - entity: binary_sensor.omv_reboot_pending
+              name: Reboot Pending
+            - entity: binary_sensor.omv_update_available
+              name: Update Available
+            - entity: binary_sensor.omv_config_dirty
+              name: Dirty Config
+          show_state: false
+          type: glance
+        - entities:
+            - entity: sensor.netdata_nas_network_rx
+              index: 0
+              name: Download
+            - entity: sensor.netdata_nas_network_tx
+              index: 1
+              name: Upload
+          hours_to_show: 48
+          icon: "mdi:speedometer"
+          name: NAS Throughput
+          points_per_hour: 0.25
+          type: "custom:mini-graph-card"
+      type: vertical-stack
+    - cards:
+        - content: "## Infrastructure"
+          type: markdown
+        - columns: 5
+          entities:
+            - entity: binary_sensor.hp_switch
+            - entity: binary_sensor.poe_switch
+            - entity: binary_sensor.wifi_router
+              name: WiFi AP
+            - entity: binary_sensor.wifi_extender
+              name: Wifi AP 2
+            - entity: binary_sensor.esxi
+            - entity: binary_sensor.esxi_2
+              name: ESXi 2
+            - entity: binary_sensor.nas
+            - entity: binary_sensor.overwatch_status
+              name: Overwatch
+            - entity: binary_sensor.switch_5
+            - entity: binary_sensor.c2960
+          type: glance
+        - animation:
+            speed: "1.5"
+            state: "on"
+          direction: right
+          entities:
+            - entity: sensor.multisensor_feather_2_7
+              name: Office RSSI
+            - entity: sensor.multisensor_feather_3_7
+              name: Master RSSI
+            - entity: sensor.multisensor_feather_4_7
+              name: Bedroom 3 RSSI
+            - entity: sensor.multisensorfeather_loft_5_7
+              name: Loft RSSI
+            - entity: sensor.rgb_strip_controler_6_4
+              name: RGB RSSI
+            - entity: sensor.front_door_wifi_signal_strength
+              name: Doorbell RSSI
+          height: 25px
+          max: "-30"
+          min: "-90"
+          positions:
+            icon: "off"
+            indicator: inside
+          severity:
+            - color: var(--label-badge-green)
+              from: "-67"
+              to: "-40"
+            - color: orange
+              from: "-80"
+              to: "-67"
+            - color: var(--label-badge-red)
+              from: "-90"
+              to: "-80"
+            - color: "#00cc00"
+              from: "-40"
+              to: "0"
+          style: |-
+            bar-card-name {
+              font-weight: bold; 
+              text-shadow: 2px 2px 2px black;
+            }
+            bar-card-value {
+              font-weight: bold;   
+              text-shadow: 2px 2px 2px black;
+            }
+            ha-card {
+              backdrop-filter: blur(4px);
+            }
+          type: "custom:bar-card"
+          unit_of_measurement: dBm
+      type: vertical-stack
+    - entities:
+        - entity: sensor.external_ip
+        - entity: sensor.tunnel_ip
+        - entity: sensor.vpn_tunnel
+          name: VPN Status
+        - type: divider
+        - entity: sensor.adguard_average_processing_speed
+        - entity: sensor.adguard_dns_queries
+        - entity: sensor.adguard_dns_queries_blocked_ratio
+        - entity: sensor.adguard_rules_count
+        - entity: switch.adguard_filtering
+        - entity: switch.adguard_parental_control
+        - entity: sensor.adguard_parental_control_blocked
+      show_header_toggle: false
+      style: |
+        ha-card {
+          backdrop-filter: blur(4px);
+        }
+      type: entities
+    - cards:
+        - entities:
+            - entity: sensor.speedtest_ping
+              name: Ping
+            - entity: sensor.speedtest_download
+              index: 1
+              name: Download
+            - entity: sensor.speedtest_upload
+              index: 2
+              name: Upload
+          hours_to_show: 48
+          icon: "mdi:speedometer"
+          name: SpeedTest.net
+          points_per_hour: 0.25
+          show:
+            extrema: true
+          type: "custom:mini-graph-card"
+      type: vertical-stack
+  icon: "mdi:server-network"
+  path: network-services
+  title: Network Services

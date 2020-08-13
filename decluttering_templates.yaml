@@ -1,0 +1,22 @@
+decluttering_templates:
+  entities-no-header:
+    card:
+      entities: "[[entities]]"
+      show_header_toggle: false
+      style: |
+        .card-content div {
+            margin: 0 !important;
+        }
+        #states {
+          padding-top: 0px !important;
+          padding-bottom: 0px !important;
+        }
+        .secondary {
+          color: darkgray !important;
+          margin-left: 2px !important;
+        }
+      type: entities
+  title:
+    card:
+      content: "## [[title]]"
+      type: markdown

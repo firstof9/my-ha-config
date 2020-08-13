@@ -1,0 +1,231 @@
+- badges: []
+  cards:
+    - cards:
+        - cards:
+            - color_thresholds:
+                - color: "#EE82EE"
+                  value: 90
+                - color: "#800000"
+                  value: 75
+                - color: "#FF0000"
+                  value: 60
+                - color: "#FFA500"
+                  value: 50
+                - color: "#FFFF00"
+                  value: 40
+                - color: "#008000"
+                  value: 0
+              color_thresholds_transition: smooth
+              entities:
+                - entity: sensor.processor_use
+                  index: 0
+              group: false
+              hour24: true
+              line_width: 6
+              name: CPU Usage
+              points_per_hour: 1
+              show:
+                extrema: true
+                icon: true
+                labels: false
+                name: true
+                state: true
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              type: "custom:mini-graph-card"
+          type: horizontal-stack
+        - cards:
+            - color_thresholds:
+                - color: "#EE82EE"
+                  value: 90
+                - color: "#800000"
+                  value: 75
+                - color: "#FF0000"
+                  value: 60
+                - color: "#FFA500"
+                  value: 50
+                - color: "#FFFF00"
+                  value: 40
+                - color: "#008000"
+                  value: 0
+              color_thresholds_transition: smooth
+              entities:
+                - entity: sensor.memory_use_percent
+                  index: 0
+                  name: RAM
+              group: false
+              hour24: true
+              line_width: 6
+              name: RAM
+              points_per_hour: 1
+              show:
+                fill: fade
+                graph: bar
+                icon: true
+                labels: false
+                name: true
+                state: true
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              type: "custom:mini-graph-card"
+            - color_thresholds:
+                - color: "#FF0000"
+                  value: 500
+                - color: "#FFA500"
+                  value: 250
+                - color: "#008000"
+                  value: 0
+              color_thresholds_transition: hard
+              entities:
+                - entity: sensor.swap_use
+                  index: 0
+              group: false
+              hour24: true
+              line_width: 6
+              name: Swap
+              points_per_hour: 1
+              show:
+                fill: fade
+                graph: bar
+                icon: true
+                labels: false
+                name: true
+                state: true
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              type: "custom:mini-graph-card"
+          type: horizontal-stack
+        - cards:
+            - entities:
+                - entity: sensor.disk_use_home
+                  index: 0
+              group: false
+              hour24: true
+              line_color: dodgerblue
+              line_width: 6
+              name: Disk
+              points_per_hour: 1
+              show:
+                fill: fade
+                graph: bar
+                icon: true
+                labels: false
+                name: true
+                state: true
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              type: "custom:mini-graph-card"
+            - color_thresholds_transition: smooth
+              entities:
+                - entity: sensor.hass_db_size
+                  index: 0
+              group: false
+              hour24: true
+              line_color: dodgerblue
+              line_width: 6
+              name: HA DB
+              points_per_hour: 1
+              show:
+                fill: fade
+                graph: bar
+                icon: true
+                labels: false
+                name: true
+                state: true
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              type: "custom:mini-graph-card"
+          type: horizontal-stack
+      type: vertical-stack
+    - entities:
+        - entity: sensor.hacs
+          name: HACS
+        - entity: sensor.last_boot
+        - entities:
+            - entity: sensor.installed_version
+              name: Running
+              units: "%"
+            - entity: sensor.latest_available_version
+              name: Latest
+          entity: sensor.installed_version
+          icon: "mdi:home-assistant"
+          name: HA Version
+          show_state: false
+          type: "custom:multiple-entity-row"
+        - entity: input_select.default_log_level
+        - entity: input_select.notify_select
+      show_header_toggle: false
+      style: |
+        ha-card {
+          backdrop-filter: blur(4px);
+        }
+      type: entities
+    - columns: 4
+      entities:
+        - entity: sensor.count_automations
+          name: Auto
+        - entity: sensor.count_scripts
+          name: Scripts
+        - entity: sensor.count_sensors
+          name: Sensors
+        - entity: sensor.count_switches
+          name: Switches
+        - entity: sensor.count_lights
+          name: Lights
+        - entity: sensor.count_fans
+          name: Fans
+        - entity: sensor.count_zwave
+          name: Zwave
+      style: |
+        ha-card {
+          backdrop-filter: blur(4px);
+        }
+      type: glance
+    - cards:
+        - cards:
+            - entity: script.upgrade_system
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              tap_action:
+                action: call-service
+                service: script.turn_on
+                service_data:
+                  entity_id: script.upgrade_system
+              type: entity-button
+            - entity: script.restart_system
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              tap_action:
+                action: call-service
+                service: script.turn_on
+                service_data:
+                  entity_id: script.restart_system
+              type: entity-button
+            - entity: input_boolean.refresh_counts
+              style: |
+                ha-card {
+                  backdrop-filter: blur(4px);
+                }
+              tap_action:
+                action: toggle
+              type: entity-button
+          type: horizontal-stack
+      type: vertical-stack
+  icon: "mdi:desktop-classic"
+  id: system
+  path: systemstats
+  title: System Stats
