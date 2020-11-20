@@ -53,7 +53,7 @@ Sensors from [homeassistant-openmediavault](https://github.com/tomaae/homeassist
 
 [vacuum-card](https://github.com/denysdovhan/vacuum-card)<br/>
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/vacuum-tab.png">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/vacuum-tab.gif">
 
 ## Lights View
 
