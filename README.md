@@ -67,7 +67,7 @@ Sensors from [homeassistant-openmediavault](https://github.com/tomaae/homeassist
 
 Power card [power-wheel-card](https://github.com/gurbyz/power-wheel-card)
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/utilities-tab.png">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/utilities-tab.gif">
 
 ## AI View
 
