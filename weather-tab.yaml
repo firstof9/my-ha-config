@@ -1,0 +1,53 @@
+- badges: []
+  cards:
+    - cards:
+        - entity: script.weather_greeting
+          show_icon: true
+          show_name: true
+          tap_action:
+            action: call-service
+            service: script.turn_on
+            service_data:
+              entity_id: script.weather_greeting
+          type: entity-button
+        - entity: sensor.nws_alerts
+          tap_action:
+            action: more-info
+          type: entity-button
+        - entity: weather.kgyr_daynight
+          name: Outside Temp
+          tap_action:
+            action: more-info
+          type: entity-button
+      type: horizontal-stack
+    - entities:
+        - entity: sensor.nws_alerts
+        - entity: sensor.nws_alert_title
+        - entity: sensor.allergy_index_today
+        - entity: sensor.cold_flu_index_today
+        - entity: sensor.asthma_index_today
+        - entity: sensor.home_lightning_counter
+        - entity: sensor.home_lightning_distance
+        - entity: sensor.home_lightning_azimuth
+      show_header_toggle: false
+      title: Weather
+      type: entities
+    - cards:
+        - aspect_ratio: 100%
+          type: iframe
+          url: >-
+            https://embed.windy.com/embed2.html?lat=33.46&lon=-112.51&zoom=7&level=surface&overlay=radar&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=33.4665785&detailLon=-112.5158831&metricWind=default&metricTemp=default&radarRange=-1
+      type: vertical-stack
+    - current: true
+      details: true
+      entity: weather.kgyr_daynight
+      forecast: true
+      icons: /local/community/weather-card/icons/
+      number_of_forecasts: "5"
+      type: "custom:weather-card"
+    - entity: weather.home
+      number_of_forecasts: "5"
+      type: "custom:weather-card"
+  icon: "mdi:weather-cloudy"
+  id: weather
+  title: Weather
