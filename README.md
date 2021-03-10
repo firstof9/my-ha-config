@@ -47,7 +47,7 @@ Sensors from [Mail and Packages](https://github.com/moralmunky/Home-Assistant-Ma
 
 Sensors from [homeassistant-openmediavault](https://github.com/tomaae/homeassistant-openmediavault)
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/infrasturcture-tab.png">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/infrasturcture-tab.gif">
 
 ## Vacuums View
 
