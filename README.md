@@ -122,7 +122,8 @@ Sensors/Cards:<br/>
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/automations-tab.png">
 
 ## Printers View
-
+Cards:<br/>
+[Threedy](https://github.com/dangreco/threedy)<br/>
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/printers-tab.gif">
 
 ## Media View
