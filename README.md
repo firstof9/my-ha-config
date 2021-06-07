@@ -10,6 +10,7 @@ Resources:<br/>
 [decluttering-card](https://github.com/custom-cards/decluttering-card)<br/>
 [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod)<br/>
 [lovelace-animated-background](https://github.com/Villhellm/lovelace-animated-background)<br/>
+[apexcharts-card](https://github.com/RomRider/apexcharts-card)<br/>
 
 ## Home View
 
@@ -60,7 +61,8 @@ Sensors from [homeassistant-openmediavault](https://github.com/tomaae/homeassist
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/lights-tab.png">
 
 ## Meters View
-
+Cards:<br/>
+[apexcharts-card](https://github.com/RomRider/apexcharts-card)<br/>
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/meters-tab.png">
 
 ## Utilities View
