@@ -123,7 +123,7 @@ Sensors/Cards:<br/>
 
 ## Printers View
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/printers-tab.png">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/printers-tab.gif">
 
 ## Media View
 
