@@ -17,6 +17,7 @@ Resources:<br/>
 Sensors:<br/>
 [Garbage-Collection](https://github.com/bruxy70/Garbage-Collection)<br/>
 [ha-card-waze-travel-time](https://github.com/r-renato/ha-card-waze-travel-time)<br/>
+[lovelace-grocy-meal-plan-card](https://github.com/firstof9/lovelace-grocy-meal-plan-card)<br/>
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/home-screen.png">
 
