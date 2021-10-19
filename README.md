@@ -39,6 +39,8 @@ Sensors from [Mail and Packages](https://github.com/moralmunky/Home-Assistant-Ma
 
 ## Battery/UPS View
 
+[Battery State Card](https://github.com/maxwroc/battery-state-card)<br/>
+
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/battery-tab.png">
 
 ## System Info View
