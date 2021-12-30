@@ -61,6 +61,7 @@ Sensors from [homeassistant-openmediavault](https://github.com/tomaae/homeassist
 
 ## Lights View
 
+[Button Card](https://github.com/custom-cards/button-card)<br>
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/lights-tab.png">
 
 ## Meters View
