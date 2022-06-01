@@ -1,6 +1,6 @@
 # my-ha-config
 
-Home Assistant Lovelace UI Configuration
+Home Assistant UI Configuration
 
 Theme: `darkblue` (see theme directory)<br/>
 <br/>
