@@ -75,6 +75,11 @@ Cards:<br/>
 [apexcharts-card](https://github.com/RomRider/apexcharts-card)<br/>
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/meters-tab.png">
 
+## Sankey SubView
+Cards:<br/>
+[sankey-chart](https://github.com/MindFreeze/ha-sankey-chart)<br/>
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/sankey-chart.png">
+
 ## Utilities View
 
 Power card [tesla-style-solar-power-card](https://github.com/reptilex/tesla-style-solar-power-card)
