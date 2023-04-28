@@ -73,7 +73,7 @@ Cards:<br/>
 
 Power card [tesla-style-solar-power-card](https://github.com/reptilex/tesla-style-solar-power-card)
 
-<img src="https://github.com/firstof9/my-ha-config/raw/master/images/utilities-tab.webm">
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/utilities-tab.webp">
 
 ## AI View
 
