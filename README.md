@@ -27,6 +27,12 @@ Sensors:<br/>
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/floor-plan.gif">
 
+## Garage View
+
+[charger-card](https://github.com/tmjo/charger-card)
+
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/garage-tab.png">
+
 ## Security View
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/security-tab.png">
