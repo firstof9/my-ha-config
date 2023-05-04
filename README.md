@@ -80,6 +80,11 @@ Cards:<br/>
 [sankey-chart](https://github.com/MindFreeze/ha-sankey-chart)<br/>
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/sankey-chart.png">
 
+## Appliances View
+Cards:<br/>
+Picture Card
+<img src="https://github.com/firstof9/my-ha-config/raw/master/images/appliances-tab.png">
+
 ## Utilities View
 
 Power card [tesla-style-solar-power-card](https://github.com/reptilex/tesla-style-solar-power-card)
