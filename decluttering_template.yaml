@@ -1,0 +1,205 @@
+decluttering_templates:
+  usage_graph_column_2_template:
+    card:
+      type: custom:apexcharts-card
+      graph_span: 1w
+      apex_config:
+        yaxis:
+          decimalsInFloat: 0
+      header:
+        show: true
+        title: '[[title]]'
+      series:
+        - entity: '[[entity]]'
+          type: area
+          color: dodgerblue
+          name: '[[title]]'
+          stroke_width: 0
+          group_by:
+            func: avg
+            duration: 1d
+  usage_graph_column_template:
+    card:
+      type: custom:apexcharts-card
+      graph_span: 24h
+      experimental:
+        color_threshold: true
+      header:
+        show: true
+        title: '[[title]]'
+      series:
+        - entity: '[[entity]]'
+          type: area
+          name: '[[title]]'
+          stroke_width: 0
+          show:
+            extremas: false
+          color_threshold:
+            - color: '#EE82EE'
+              value: 90
+            - color: '#800000'
+              value: 75
+            - color: '#FF0000'
+              value: 60
+            - color: '#FFA500'
+              value: 50
+            - color: '#FFFF00'
+              value: 40
+            - color: '#008000'
+              value: 0
+          group_by:
+            func: avg
+            duration: 1hr
+  usage_graph_line_template:
+    card:
+      type: custom:apexcharts-card
+      graph_span: 24h
+      experimental:
+        color_threshold: true
+      header:
+        show: true
+        title: '[[title]]'
+      series:
+        - entity: '[[entity]]'
+          type: line
+          name: '[[title]]'
+          stroke_width: 3
+          show:
+            extremas: false
+          color_threshold:
+            - color: '#EE82EE'
+              value: 90
+            - color: '#800000'
+              value: 75
+            - color: '#FF0000'
+              value: 60
+            - color: '#FFA500'
+              value: 50
+            - color: '#FFFF00'
+              value: 40
+            - color: '#008000'
+              value: 0
+          group_by:
+            func: avg
+            duration: 10min
+  temp_graphs_template:
+    card:
+      type: custom:apexcharts-card
+      header:
+        show: true
+        title: '[[title]]'
+        show_states: true
+        colorize_states: false
+      experimental:
+        color_threshold: true
+      graph_span: 24h
+      yaxis:
+        - id: temp
+          apex_config:
+            tickAmount: 4
+            decimalsInFloat: 1
+        - id: humidity
+          opposite: true
+          apex_config:
+            tickAmount: 4
+            decimalsInFloat: 0
+      series:
+        - entity: sensor.[[name]]_1
+          show:
+            name_in_header: true
+          name: Temp
+          yaxis_id: temp
+          stroke_width: 3
+          color_threshold:
+            - color: '#FF0000'
+              value: 90
+            - color: '#FFA500'
+              value: 85
+            - color: '#FFFF00'
+              value: 80
+            - color: '#008000'
+              value: 70
+            - color: '#00FFFF'
+              value: 60
+            - color: '#0000FF'
+              value: 50
+          group_by:
+            func: avg
+            duration: 60min
+        - entity: sensor.[[name]]_0
+          name: Humidity
+          type: column
+          stroke_width: 6
+          yaxis_id: humidity
+          color: purple
+          show:
+            name_in_header: true
+          group_by:
+            func: avg
+            duration: 60min
+        - entity: sensor.[[name]]_15
+          name: Feels Like
+          yaxis_id: temp
+          stroke_width: 2
+          type: line
+          color: orange
+          show:
+            name_in_header: true
+          group_by:
+            func: avg
+            duration: 60min
+  temp_graphs_template_2:
+    card:
+      type: custom:apexcharts-card
+      header:
+        show: true
+        title: '[[title]]'
+        show_states: true
+        colorize_states: false
+      experimental:
+        color_threshold: true
+      graph_span: 24h
+      yaxis:
+        - id: temp
+          apex_config:
+            tickAmount: 4
+            decimalsInFloat: 1
+        - id: humidity
+          opposite: true
+          apex_config:
+            tickAmount: 4
+            decimalsInFloat: 0
+      series:
+        - entity: sensor.[[name]]_temperature
+          show:
+            name_in_header: true
+          name: Temp
+          yaxis_id: temp
+          stroke_width: 3
+          color_threshold:
+            - color: '#FF0000'
+              value: 90
+            - color: '#FFA500'
+              value: 85
+            - color: '#FFFF00'
+              value: 80
+            - color: '#008000'
+              value: 70
+            - color: '#00FFFF'
+              value: 60
+            - color: '#0000FF'
+              value: 50
+          group_by:
+            func: avg
+            duration: 60min
+        - entity: sensor.[[name]]_humidity
+          name: Humidity
+          type: column
+          stroke_width: 6
+          yaxis_id: humidity
+          color: purple
+          show:
+            name_in_header: true
+          group_by:
+            func: avg
+            duration: 60min
