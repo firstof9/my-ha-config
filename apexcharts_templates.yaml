@@ -1,0 +1,29 @@
+apexcharts_card_templates:
+  default:
+    color_list:
+      - red
+      - green
+      - blue
+  bandwidth_chart:
+    graph_span: 12h
+    config_templates: default
+    header:
+      show: true
+      show_states: true
+      colorize_states: true
+    all_series_config:
+      stroke_width: 2
+      opacity: 0.3
+      type: area
+  nas_chart:
+    graph_span: 12h
+    stacked: true
+    config_templates: default
+    header:
+      show: true
+      show_states: true
+      colorize_states: true
+    all_series_config:
+      stroke_width: 2
+      opacity: 0.3
+      type: column
