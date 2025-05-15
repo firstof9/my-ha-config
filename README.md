@@ -112,6 +112,8 @@ Each button now goes to a subview for devices in those rooms
 Subview for per VM info
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/servers-tab.png">
+
+VM Subview:
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/virt-machines-subview.png">
 
 ## Sensors View
