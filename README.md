@@ -140,6 +140,8 @@ Indoor Air Quality by [Apollo Air-1](https://apolloautomation.com/products/air-1
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/climate-tab.png">
 
 ## Cameras View
+Card:<br/>
+[advanced-camera-card](https://github.com/dermotduffy/advanced-camera-card)
 
 <img src="https://github.com/firstof9/my-ha-config/raw/master/images/cameras-tab.png">
 
