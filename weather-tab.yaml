@@ -1,53 +1,331 @@
-- badges: []
-  cards:
-    - cards:
-        - entity: script.weather_greeting
-          show_icon: true
-          show_name: true
-          tap_action:
-            action: call-service
-            service: script.turn_on
-            service_data:
-              entity_id: script.weather_greeting
-          type: entity-button
-        - entity: sensor.nws_alerts
-          tap_action:
-            action: more-info
-          type: entity-button
-        - entity: weather.kgyr_daynight
-          name: Outside Temp
-          tap_action:
-            action: more-info
-          type: entity-button
-      type: horizontal-stack
-    - entities:
-        - entity: sensor.nws_alerts
-        - entity: sensor.nws_alert_title
-        - entity: sensor.allergy_index_today
-        - entity: sensor.cold_flu_index_today
-        - entity: sensor.asthma_index_today
-        - entity: sensor.home_lightning_counter
-        - entity: sensor.home_lightning_distance
-        - entity: sensor.home_lightning_azimuth
-      show_header_toggle: false
-      title: Weather
-      type: entities
-    - cards:
-        - aspect_ratio: 100%
-          type: iframe
-          url: >-
-            https://embed.windy.com/embed2.html?lat=33.46&lon=-112.51&zoom=7&level=surface&overlay=radar&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=33.4665785&detailLon=-112.5158831&metricWind=default&metricTemp=default&radarRange=-1
-      type: vertical-stack
-    - current: true
-      details: true
-      entity: weather.kgyr_daynight
-      forecast: true
-      icons: /local/community/weather-card/icons/
-      number_of_forecasts: "5"
-      type: "custom:weather-card"
-    - entity: weather.home
-      number_of_forecasts: "5"
-      type: "custom:weather-card"
-  icon: "mdi:weather-cloudy"
-  id: weather
-  title: Weather
+title: Weather
+path: weather
+type: sections
+max_columns: 4
+icon: mdi:weather-cloudy
+sections:
+  - type: grid
+    cards:
+      - cards:
+          - show_name: true
+            show_icon: true
+            entity: script.weather_greeting
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.weather_greeting
+            type: entity-button
+            icon: mdi:speaker-message
+            name: Announce Weather
+          - show_name: true
+            show_icon: true
+            entity: sensor.nws_alerts_alerts_2
+            tap_action:
+              action: more-info
+            type: entity-button
+            name: NWS Alerts
+          - show_name: true
+            show_icon: true
+            entity: weather.climacell_v4_nowcast_2
+            name: Outside Temp
+            tap_action:
+              action: more-info
+            type: entity-button
+        type: horizontal-stack
+      - type: iframe
+        url: >-
+          https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=default&metricWind=default&zoom=9&overlay=radar&product=radar&level=surface&lat=35.5&lon=-113.8
+        aspect_ratio: 100%
+        layout_options:
+          grid_columns: 4
+          grid_rows: 7
+      - type: entity
+        entity: sensor.sun_next_dusk
+        layout_options:
+          grid_columns: 4
+          grid_rows: 2
+      - type: entity
+        entity: sensor.sun_next_dawn
+        layout_options:
+          grid_columns: 4
+          grid_rows: 2
+  - type: grid
+    cards:
+      - type: vertical-stack
+        cards:
+          - entities:
+              - entity: sensor.nws_alerts_alerts_2
+                name: NWS Alerts (ZIP)
+              - entity: sensor.nws_alerts_gps_alerts
+                name: NWS Alerts (GPS)
+              - entity: sensor.nws_alert_title
+            show_header_toggle: false
+            title: Weather
+            type: entities
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                entity: sensor.allergy_index_today
+                min: 0
+                max: 12
+                needle: true
+                severity:
+                  green: 0
+                  yellow: 4.9
+                  red: 7.3
+                name: Allergy
+              - type: gauge
+                entity: sensor.asthma_index_today
+                min: 0
+                max: 12
+                needle: true
+                severity:
+                  green: 0
+                  yellow: 4.9
+                  red: 7.3
+                name: Asthma
+              - type: gauge
+                entity: sensor.cold_flu_index_today
+                min: 0
+                max: 12
+                needle: true
+                severity:
+                  green: 0
+                  yellow: 4.9
+                  red: 7.3
+                name: Cold & Flu
+      - type: conditional
+        conditions:
+          - condition: state
+            entity: sensor.climacell_v4_us_epa_air_quality_index_2
+            state_not: unknown
+        card:
+          type: vertical-stack
+          cards:
+            - type: gauge
+              entity: sensor.climacell_v4_us_epa_air_quality_index_2
+              severity:
+                green: 0
+                yellow: 51
+                red: 101
+              needle: true
+              max: 300
+              min: 0
+              name: Air Quality (Outside)
+            - type: horizontal-stack
+              cards:
+                - type: gauge
+                  entity: sensor.climacell_v4_nitrogen_dioxide_2
+                  min: 0
+                  max: 3102
+                  needle: false
+                  severity:
+                    green: 0
+                    yellow: 144.76
+                    red: 949.4
+                  name: Nitrogen Dioxide
+                - type: gauge
+                  entity: sensor.climacell_ozone
+                  min: 0
+                  max: 989.8
+                  needle: false
+                  severity:
+                    green: 0
+                    yellow: 117.6
+                    red: 284.2
+                  name: Ozone
+                - type: gauge
+                  entity: sensor.climacell_sulphur_dioxide
+                  min: 0
+                  max: 2109.1
+                  needle: false
+                  severity:
+                    green: 0
+                    yellow: 146.72
+                    red: 343.22
+                  name: Sulfur Dioxide
+            - type: horizontal-stack
+              cards:
+                - type: gauge
+                  entity: sensor.climacell_v4_particulate_matter_2_5_mm_2
+                  needle: false
+                  severity:
+                    green: 0
+                    yellow: 24
+                    red: 45
+                  max: 375
+                  min: 0
+                  name: PM 2.5
+                - type: gauge
+                  entity: sensor.climacell_v4_particulate_matter_10_mm_2
+                  min: 0
+                  needle: false
+                  severity:
+                    green: 0
+                    yellow: 104
+                    red: 204
+                  max: 515
+                  name: PM 10
+      - type: gauge
+        entity: sensor.climacell_uv_index
+        name: UV Index
+        max: 15
+        segments:
+          - color: "#B567A4"
+            from: 11
+          - color: "#E53210"
+            from: 8
+          - color: "#F18B00"
+            from: 6
+          - color: "#FFF300"
+            from: 3
+          - color: "#3EA72D"
+            from: 0
+        needle: true
+        grid_options:
+          columns: 6
+          rows: 3
+      - graph: line
+        type: sensor
+        detail: 1
+        entity: sensor.climacell_dew_point
+        name: Dew Point
+        grid_options:
+          columns: 6
+          rows: 3
+      - graph: line
+        type: sensor
+        detail: 1
+        entity: sensor.airnow_ozone
+        grid_options:
+          columns: 6
+          rows: 2
+        name: Ozone
+      - graph: line
+        type: sensor
+        entity: sensor.airnow_pm10
+        detail: 1
+        name: PM10
+      - type: gauge
+        entity: sensor.airnow_air_quality_index
+        needle: true
+        max: 650
+        segments:
+          - color: "#ce30ff"
+            from: 500.5
+          - color: "#7e0023"
+            from: 350.5
+          - color: "#8f3f97"
+            from: 250.5
+          - color: "#FF0000"
+            from: 150.5
+          - color: "#FFA500"
+            from: 55.5
+          - color: "#FFFF00"
+            from: 35.5
+          - color: "#00e400"
+            from: 0
+        name: Outside Air Quality Index
+  - type: grid
+    cards:
+      - show_current: true
+        show_forecast: true
+        type: weather-forecast
+        entity: weather.climacell_v4_daily
+        forecast_type: daily
+        secondary_info_attribute: humidity
+        layout_options:
+          grid_columns: 4
+          grid_rows: 4
+      - show_current: true
+        show_forecast: true
+        type: weather-forecast
+        entity: weather.kbxk_daynight
+        forecast_type: twice_daily
+        name: NWS
+        secondary_info_attribute: humidity
+        layout_options:
+          grid_columns: 4
+          grid_rows: 4
+      - show_current: true
+        show_forecast: true
+        type: weather-forecast
+        entity: weather.home
+        forecast_type: daily
+        name: Accuweather
+        secondary_info_attribute: humidity
+        layout_options:
+          grid_columns: 4
+          grid_rows: 4
+  - type: grid
+    cards:
+      - type: gauge
+        entity: sensor.apollo_air_1_89ed74_aqi_value
+        needle: true
+        max: 650
+        segments:
+          - color: "#ce30ff"
+            from: 500.5
+          - color: "#7e0023"
+            from: 350.5
+          - color: "#8f3f97"
+            from: 250.5
+          - color: "#FF0000"
+            from: 150.5
+          - color: "#FFA500"
+            from: 55.5
+          - color: "#FFFF00"
+            from: 35.5
+          - color: "#00e400"
+            from: 0
+        name: Inside Air Quality Index
+        unit: " "
+      - type: gauge
+        entity: sensor.downstairs_air_sensor_sen55_voc
+        needle: true
+        segments:
+          - color: "#FF0000"
+            from: 400
+          - color: "#FFA500"
+            from: 250
+          - color: "#FFFF00"
+            from: 150
+          - color: "#008000"
+            from: 0
+        max: 1000
+        name: Inside VOC
+      - type: gauge
+        entity: sensor.downstairs_air_sensor_co2
+        segments:
+          - color: "#FF0000"
+            from: 5000
+          - color: "#FFA500"
+            from: 2000
+          - color: "#FFFF00"
+            from: 1000
+          - color: "#008000"
+            from: 0
+        max: 10000
+        name: Inside CO2
+        needle: true
+      - type: gauge
+        entity: sensor.downstairs_air_sensor_sen55_nox
+        segments:
+          - color: "#FF0000"
+            from: 300
+          - color: "#FFA500"
+            from: 150
+          - color: "#FFFF00"
+            from: 20
+          - color: "#008000"
+            from: 0
+        needle: true
+        max: 500
+        name: Inside NOx
+      - type: entity
+        entity: sensor.downstairs_air_sensor_voc_quality
+        name: VOC Quality
+        layout_options:
+          grid_columns: 4
+          grid_rows: 2
