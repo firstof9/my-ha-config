@@ -4,33 +4,52 @@ darkblue:
   disabled-text-color: "#545454"
   divider-color: "rgba(255, 255, 255, 0.12)"
   light-primary-color: "#3e78ad"
-  paper-card-background-color: "#2a2a2be5" # "#1d1d1de5" previous value
+  paper-card-background-color: "#2d2b2b" # "#1d1d1de5" previous value
   paper-grey-200: "#191919"
   paper-item-icon-color: "#d3d3d3"
-  paper-listbox-background-color: "#2a2a2be5" # "#202020" previous value
+  paper-listbox-background-color: "#2d2b2b" # "#202020" previous value
   primary-background-color: "#303030"
   primary-color: "#3974a7"
   primary-text-color: "#cfcfcf"
   secondary-background-color: "#131313"
   sidebar-text_-_background: "#262f35"
   sidebar-icon-color: "var(--primary-text-color)"
-  # Colors based on variables, see above
-  paper-card-header-color: "var(--paper-item-icon-color)"
-  paper-item-icon-active-color: "var(--primary-color)"
-  paper-item-icon_-_color: "var(--primary-text-color)"
-  paper-listbox-color: "var(--primary-text-color)"
-  paper-grey-50: "var(--primary-text-color)"
-  paper-slider-active-color: "var(--primary-color)"
-  paper-slider-knob-color: "var(--primary-color)"
-  paper-slider-knob-start-color: "var(--primary-color)"
-  paper-slider-pin-color: "var(--primary-color)"
-  paper-slider-secondary-color: "var(--light-primary-color)"
-  paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
-  paper-toggle-button-checked-button-color: "var(--primary-color)"
-  paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
-  paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
+  
+  # Updated css
+  state-icon-color: "var(--primary-text-color)"
+  state-active-color: "var(--primary-color)"
   secondary-text-color: "var(--primary-color)"
-  label-badge-red: "#9e0909"
+  
+  # sidebar
+  md-sys-color-on-surface: "var(--primary-background-color)"
+
+  # Colors based on variables, see above (removed)
+  # paper-card-header-color: "var(--paper-item-icon-color)"
+  # paper-item-icon-active-color: "var(--primary-color)"
+  # paper-item-icon_-_color: "var(--primary-text-color)"
+  # paper-listbox-color: "var(--primary-text-color)"
+  # paper-grey-50: "var(--primary-text-color)"
+  # paper-slider-active-color: "var(--primary-color)"
+  # paper-slider-knob-color: "var(--primary-color)"
+  # paper-slider-knob-start-color: "var(--primary-color)"
+  # paper-slider-pin-color: "var(--primary-color)"
+  # paper-slider-secondary-color: "var(--light-primary-color)"
+  # paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
+  # paper-toggle-button-checked-button-color: "var(--primary-color)"
+  # paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
+  # paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
+
+  # inputs
+  input-fill-color: "var(--primary-background-color)"
+  input-label-ink-color: "var(--primary-text-color)"
+  input-ink-color: "var(--primary-text-color)"
+  input-hover-line-color: "var(--primary-color)"
+  input-disabled-ink-color: "var(--primary-text-color)"
+  input-dropdown-icon-color: "var(--primary-text-color)"
+  input-disabled-fill-color: "var(--paper-card-background-color)"
+  input-idle-line-color: "var(--primary-text-color)"
+  # labels
+  # label-badge-red: "#9e0909"
   label-badge-background-color: "var(--secondary-background-color)"
   label-badge-text-color: "var(--text-primary-color)"
   table-row-background-color: "var(--paper-card-background-color)"
@@ -40,60 +59,65 @@ darkblue:
   ha-card-box-shadow: "0 5px 5px 0 rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)"
   # ha-card-background: "filter: blur(4px)"
   card-background-color: "var(--paper-card-background-color)"
+  code-editor-background-color: "var(--primary-background-color)"
 
-  # Z-Wave Graph specific colors to be added to theme
-
-  greenish: "#00cc00" # level 0 color
-  cyanish: "#00b36b" # level 1 color
-  light-magenta: "#999900" # level 2 color
-  dark-magenta: "#b36b00" # level 3 color
-  dimmed-text: "#696969" # level 4 color
-  light-background: "#595959" # level background color
-
-  zwave-background-color: var(--primary-background-color) # main window bacground color
-  zwave-group-background-color: var(--secondary-background-color) # grouped devices background color
-  zwave-group-border-color: var(--light-background) # border of group rectangle
-  zwave-group-label-color: var(--primary-text-color) # color of group label
-  zwave-zoom-highlight-color: var(--primary-color) # zoom area bacground color - not identified yet
-  zwave-zoom-border-color: var(--light-background) # zoom area border color - not identified yet
-  #zwave-legend-header-color: var(--primary-text-color)             # text of legend header - not know yet how to implement
-  zwave-legend-item-color: var(--secondary-text-color) # legend item text color (not for node colors)
-  zwave-node-hub-background-color: var(--light-background) # zwave hub background color
-  zwave-node-hub-outline-color: var(--greenish) # zwave hub background color
-  zwave-node-hub-text-color: var(--greenish) # zwave hub text color
-  zwave-1-hop-background-color: var(--light-background) # 1st level node background color
-  zwave-1-hop-outline-color: var(--cyanish) # 1st level node outline color
-  zwave-1-hop-text-color: var(--cyanish) # 1st level node text color
-  zwave-2-hop-background-color: var(--light-background) # ..........
-  zwave-2-hop-outline-color: var(--light-magenta)
-  zwave-2-hop-text-color: var(--light-magenta)
-  zwave-3-hop-background-color: var(--light-background)
-  zwave-3-hop-outline-color: var(--dark-magenta)
-  zwave-3-hop-text-color: var(--dark-magenta)
-  zwave-4-hop-background-color: var(--light-background)
-  zwave-4-hop-outline-color: var(--dimmed-text)
-  zwave-4-hop-text-color: var(--dimmed-text)
-  zwave-failed-background-color: var(--light-background)
-  zwave-failed-outline-color: "#ff0000" #var(--)
-  zwave-failed-text-color: "#ff0000" #var(--)
-  zwave-unconnected-background-color: var(--primary-background-color)
-  zwave-unconnected-outline-color: var(--dimmed-text)
-  zwave-unconnected-text-color: var(--dimmed-text)
+  #Code Mirror
+  codemirror-keyword: "#C792EA"
+  codemirror-operator: "#89DDFF"
+  codemirror-variable: "#f07178"
+  codemirror-variable-2: "#EEFFFF"
+  codemirror-variable-3: "#DECB6B"
+  codemirror-builtin: "#FFCB6B"
+  codemirror-atom: "#F78C6C"
+  codemirror-number: "#FF5370"
+  codemirror-def: "#82AAFF"
+  codemirror-string: "#C3E88D"
+  codemirror-string-2: "#f07178"
+  codemirror-comment: "#545454"
+  codemirror-tag: "#FF5370"
+  codemirror-meta: "#FFCB6B"
+  codemirror-attribute: "#C792EA"
+  codemirror-property: "#C792EA"
+  codemirror-qualifier: "#DECB6B"
+  codemirror-type: "#DECB6B"
 
   # HACS Colors
   markdown-code-background-color: var(--secondary-background-color)
 
+  # Map filter
+  map-filter: invert(0.9) hue-rotate(170deg) grayscale(0.7)
+
   # Card Mod
-  card-mod-theme: darkblue
+  # card-mod-theme: darkblue
 
-  ok-color: rgb(0, 80, 0)
-  error-color: rgb(255, 0, 0)
-  info-color: rgb(50, 50, 150)
-  warning-color: rgb(100, 100, 0)
+  # ok-color: rgb(0, 80, 0)
+  # error-color: rgb(255, 0, 0)
+  # info-color: rgb(0, 90, 230)
+  # warning-color: rgb(225, 225, 0)
 
-  bg-filter: blur(4px)
+  # bg-filter: blur(4px)
 
-  card-mod-card: |
-    ha-card {
-      backdrop-filter: var(--bg-filter);
-    }
+  # card-mod-card: |
+  #   ha-card {
+  #     backdrop-filter: var(--bg-filter);
+  #   }
+
+  # Weather icons
+  weather-icon-clear-night: url("/local/icons/weather_icons/filled/all/clear-night.svg")
+  weather-icon-cloudy: url("/local/icons/weather_icons/filled/all/cloudy.svg")
+  weather-icon-fog: url("/local/icons/weather_icons/filled/all/fog.svg")
+  weather-icon-lightning: url("/local/icons/weather_icons/filled/all/thunderstorms.svg")
+  weather-icon-lightning-rainy: url("/local/icons/weather_icons/filled/all/thunderstorms-rain.svg")
+  weather-icon-partlycloudy: url("/local/icons/weather_icons/filled/all/partly-cloudy-day.svg")
+  weather-icon-pouring: url("/local/icons/weather_icons/filled/all/rain.svg")
+  weather-icon-rainy: url("/local/icons/weather_icons/filled/all/drizzle.svg")
+  weather-icon-hail: url("/local/icons/weather_icons/filled/all/hail.svg")
+  weather-icon-snowy: url("/local/icons/weather_icons/filled/all/snow.svg")
+  weather-icon-snowy-rainy: url("/local/icons/weather_icons/filled/all/sleet.svg")
+  weather-icon-sunny: url("/local/icons/weather_icons/filled/all/clear-day.svg")
+  weather-icon-windy: url("/local/icons/weather_icons/filled/all/wind.svg")
+  weather-icon-windy-variant: url("/local/icons/weather_icons/filled/all/dust-wind.svg")
+  weather-icon-exceptional: url("/local/icons/weather_icons/filled/all/thermometer.svg")
+
+  # Sections
+  ha-view-sections-column-gap: 8px
